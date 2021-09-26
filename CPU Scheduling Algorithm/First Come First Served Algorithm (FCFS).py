@@ -21,10 +21,10 @@ def FCFS(process):
     print("Average Turnaround-Time is", round(turnsum/n, 3))
     
 
-
+# Driver Code
 if __name__ == "__main__":
     n=int(input("Enter the number of process: "))
-    process=[]
+    process=[]                                  # Process is list for all the processes to be executed 
 
     for i in range(1, n+1):
         process.append([i, int(input("Enter Burst-Time for Process-"+str(i)+": "))])

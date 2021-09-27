@@ -1,3 +1,6 @@
+# Shortest Job First Program in Python
+
+# Function which implements SJF algorithm. 
 def SJF(process, n):
     process = sorted(process, key=lambda x:x[1])            # Sorting process according to their Burst Time
     wait= 0

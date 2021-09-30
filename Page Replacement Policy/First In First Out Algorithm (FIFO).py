@@ -25,5 +25,4 @@ if __name__ == "__main__":
     print("\nThe number of Page Faults occurred in FIFO are: ", FIFO(pages, capacity))
     
     
-    
-    ##### Note : The Output Image of the Program is also uploaded in the same directory.  #####
+##### Note : The Output Image of the Program is also uploaded in the same directory.  #####

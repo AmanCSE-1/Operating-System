@@ -1,9 +1,9 @@
-# LRU 
+# Least Recently Used Algorithm Implementation in Python 
 
 def LRU(pages, capacity):
-    memory=list()
-    recentlyUsed = list()
-    pageFault=0
+    memory = list()                           # Initializing the memory
+    recentlyUsed = list()                     # Initializing the list for storing recently used pages
+    pageFault = 0                             # Count of number of page Faults
     
     for page in pages:    
         if (page not in memory):
@@ -27,6 +27,8 @@ def LRU(pages, capacity):
                 
     return pageFault
   
+    
+# Driver Code to run the program
 if __name__=="__main__":
     pages = list(map(int, input('Enter the sequence of Pages: ').strip().split()))
     capacity=int(input('Enter maximum number of pages in a frame: '))               # max pages in frame

@@ -19,7 +19,6 @@ def LRU(pages, capacity):
                 memory.append(page)             # Then, add the page to memory
             else:
                 memory.append(page)             # Add the page to memory, (but apply LRU Algorithm)
-                
                 # Find the page that is least recently used (page will be at 0th index of recentlyUsed list) 
                 index = memory.index(recentlyUsed[0])           
                 memory.pop(index)               # Pop the page from memory
@@ -43,3 +42,6 @@ if __name__=="__main__":
     capacity=int(input('Enter maximum number of pages in a frame: '))               # max pages in frame
 
     print("\nThe number of Page Faults occured in LRU are: ", LRU(pages, capacity))
+    
+    
+##### Note : The Output Image of the Program is also uploaded in the same directory.  #####

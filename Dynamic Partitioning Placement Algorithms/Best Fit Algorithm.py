@@ -1,6 +1,11 @@
-def bestFit(blockSize, processSize): 
-    allocate = [-1]*len(blockSize) 
+# Best Fit Dynamic Partitioning Placement Algorithm Program in Python
 
+# Function to implement Best-Fit
+def bestFit(blockSize, processSize): 
+    allocate = [-1]*len(blockSize)                  # Initializing allocate list 
+
+    
+    # select the best memory block that can be allocated to block.
     for i in range(len(processSize)): 
         bestIndex = -1
         for j in range(len(blockSize)): 
@@ -14,6 +19,8 @@ def bestFit(blockSize, processSize):
             allocate[i] = bestIndex  
             blockSize[bestIndex] -= processSize[i] 
 
+            
+    # Display the processes with the blocks that are allocated to a respective process.
     print("\nFor Best Fit Algorithm")
     print(" Process No\t Process Size \t Block Number")
     for i in range(len(processSize)): 
@@ -26,7 +33,7 @@ def bestFit(blockSize, processSize):
 
 if __name__ == '__main__':  
     blockSize = list(map(int, input("Enter the size of each block : ").strip().split()))    
-    processSize = list(map(int, input("Enter the size of each process : ").strip().split()))    
+    processSize = list(map(int, input("Enter the size of each process : ").strip().split()))     #  Get the size of each block and process requests.
     
     bestFit(blockSize, processSize) 
     

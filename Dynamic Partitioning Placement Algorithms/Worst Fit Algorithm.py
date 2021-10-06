@@ -23,3 +23,10 @@ def worstFit(blockSize, processSize):
             print(allocate[i] + 1)
         else:
             print ("Not Allocated")
+            
+
+if __name__ == '__main__':
+    blockSize = list(map(int, input("Enter the size of each block : ").strip().split()))
+    processSize = list(map(int, input("Enter the size of each process : ").strip().split()))
+
+    bestFit(blockSize, processSize)

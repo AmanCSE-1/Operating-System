@@ -1,3 +1,5 @@
+# Worst Fit Dynamic Partitioning Placement Algorithm in Python 
+
 def worstFit(blockSize, processSize):
     allocate = [-1]*len(blockSize)
     for i in range(len(processSize)):

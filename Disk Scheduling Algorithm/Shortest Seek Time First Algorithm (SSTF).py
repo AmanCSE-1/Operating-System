@@ -1,3 +1,9 @@
+# SSTF Disk Scheduling Algorithm in Python
+
+# Function to compute seektime based on SSTF Alg
+# Input paramters - seekSeq (Sequence in which disk requests arrives in the queue)
+#                 - head (current posistion of Read/Write pointer)
+
 def SSTF(seekSeq, head):
     seekTime = 0
     current = head

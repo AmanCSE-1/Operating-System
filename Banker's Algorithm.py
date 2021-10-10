@@ -24,3 +24,28 @@ for i in range(n):
     for j in range(m):
         need[i][j] = maX[i][j] - allocation[i][j]
       
+sequence = ['0']*n
+visited = [0]*n
+count = 0
+while count<n:
+    safe = False
+    for i in range(n):
+        if visited[i]==0 and check(i):
+            sequence[count] = "P" + str(i)
+            count += 1
+            visited[i] = 1
+            safe = True
+            for j in range(m):
+                available[j] += allocation[i][j]
+    
+    if not safe:
+        break
+
+if (count<n):
+    print("The System is Unsafe!")
+    
+else:
+    print()
+    print("The System is Safe!")
+    print("Safe Sequence is", sequence)
+    print("Available resource is", available)

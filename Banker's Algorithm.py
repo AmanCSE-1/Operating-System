@@ -6,7 +6,6 @@ def check(i):
 
 n = int(input("Enter the number of Processes: "))
 m = int(input("Enter the number of Resources: "))
-print()
 
 allocation = []
 for i in range(n):
@@ -18,12 +17,13 @@ for i in range(n):
 
 available = list(map(int, input("\nEnter the number of instances available of Resources : ").strip().split()))    
 
-
+# Compute the need matrix
 need = [[0 for i in range(m)] for j in range(n)]
 for i in range(n):
     for j in range(m):
         need[i][j] = maX[i][j] - allocation[i][j]
-      
+
+# Implements Banker's Algorithm 
 sequence = ['0']*n
 visited = [0]*n
 count = 0
